@@ -4,11 +4,24 @@
 var App = require("./app.bs.js");
 var React = require("react");
 var ReactDom = require("react-dom");
+var Caml_option = require("rescript/lib/js/caml_option.js");
+
+function render(prim0, prim1) {
+  ReactDom.render(prim0, prim1);
+  
+}
+
+function querySelector(prim) {
+  return Caml_option.nullable_to_opt(document.querySelector(prim));
+}
 
 var e = document.querySelector("#root");
 
 if (!(e == null)) {
-  ReactDom.render(React.createElement(App.make, {}), e);
+  var prim0 = React.createElement(App.make, {});
+  ReactDom.render(prim0, e);
 }
 
+exports.render = render;
+exports.querySelector = querySelector;
 /* e Not a pure module */
