@@ -6,26 +6,26 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev | npm run bsb-watch",
+    "start": "npm run dev | npm run watch",
     "dev": "webpack-dev-server",
-    "bsb-watch": "bsb -make-world -w",
-    "build": "bsb -make-world && webpack",
-    "clean": "bsb -clean-world"
+    "watch": "rescript build -w",
+    "build": "rescript && webpack",
+    "clean": "rescript clean",
+    "format": "rescript format -all"
   },
   "keywords": [],
   "author": "Mateusz Zatorski",
   "license": "MIT",
   "dependencies": {
-    "bs-director": "^0.0.1",
     "lodash.flatten": "^4.4.0",
     "lodash.shuffle": "^4.2.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "reason-react": "https://github.com/reasonml/reason-react.git",
-    "twemoji": "^2.3.0"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "@rescript/react": "0.10.3",
+    "twemoji": "^14.0.2"
   },
   "devDependencies": {
-    "bs-platform": "^1.7.3",
+    "rescript": "^9.1.4",
     "webpack": "^2.5.1",
     "webpack-dev-server": "2"
   }
