@@ -1,10 +1,10 @@
 {
-  "name": "create-reason-react-app",
+  "name": "together",
   "reason": {
     "react-jsx": 3
   },
   "bs-dependencies": [
-    "reason-react"
+    "@rescript/react"
   ],
   "sources": [
     {

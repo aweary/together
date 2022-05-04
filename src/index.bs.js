@@ -3,8 +3,12 @@
 
 var App = require("./app.bs.js");
 var React = require("react");
-var ReactDOMRe = require("reason-react/src/legacy/ReactDOMRe.bs.js");
+var ReactDom = require("react-dom");
 
-ReactDOMRe.renderToElementWithId(React.createElement(App.make, {}), "root");
+var e = document.querySelector("#root");
 
-/*  Not a pure module */
+if (!(e == null)) {
+  ReactDom.render(React.createElement(App.make, {}), e);
+}
+
+/* e Not a pure module */
