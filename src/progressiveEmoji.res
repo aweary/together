@@ -15,11 +15,8 @@ let getTwemojiSource = emoji => {
 let make = (~emoji: string) => {
   let initialState = {loaded: false, src: getTwemojiSource(emoji)}
   let (state, setState) = React.useState(_ => initialState)
-  //   let emojis =
-  //     Js.Array.map(emoji => <ProgressiveEmoji emoji />, Emoji.getPeople());\
 
-  let people = Emoji.getPeople()
-  let emojis = Js.Array.map(emoji => <img className="emoji" src=emoji />, people)
+  let emojis = Js.Array.map(emoji => <img className="emoji" src=emoji />, Emoji.getPeople())
 
   React.useEffect2(() => {
     let image = createImage()

@@ -23,8 +23,7 @@ function ProgressiveEmoji(Props) {
       });
   var setState = match[1];
   var state = match[0];
-  var people = Emoji.getPeople(undefined);
-  var emojis = people.map(function (emoji) {
+  var emojis = Emoji.getPeople(undefined).map(function (emoji) {
         return React.createElement("img", {
                     className: "emoji",
                     src: emoji
