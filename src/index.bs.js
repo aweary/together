@@ -3,7 +3,7 @@
 
 var App = require("./app.bs.js");
 var React = require("react");
-var ReactDOMRe = require("reason-react/lib/js/src/legacy/ReactDOMRe.js");
+var ReactDOMRe = require("reason-react/src/legacy/ReactDOMRe.bs.js");
 
 ReactDOMRe.renderToElementWithId(React.createElement(App.make, {}), "root");
 

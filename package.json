@@ -22,7 +22,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "reason-react": "https://github.com/reasonml/reason-react.git",
-    "twemoji": "^2.3.0"
+    "twemoji": "^14.0.2"
   },
   "devDependencies": {
     "bs-platform": "^9.0.2",
