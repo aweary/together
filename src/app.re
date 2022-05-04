@@ -1,22 +1,13 @@
-external innerWidth : int = "window.innerWidth" [@@bs.val];
+[@bs.val] external innerWidth: int = "window.innerWidth";
 
-external innerHeight : int = "window.innerHeight" [@@bs.val];
+[@bs.val] external innerHeight: int = "window.innerHeight";
 
-module App = {
-  include ReactRe.Component;
-  type props = {title: string};
-  let name = "App";
+[@react.component]
+let make = () => {
   let emojis =
-    Js.Array.map
-      (fun emoji => <ProgressiveEmoji emoji />)
-      (Emoji.getPeople ());
-  let render _ =>
-    <div className="app">
-      <h1 className="header"> (ReactRe.stringToElement "Together") </h1>
-      (ReactRe.arrayToElement emojis)
-    </div>;
+    Js.Array.map(emoji => <ProgressiveEmoji emoji />, Emoji.getPeople());
+  <div className="app">
+    <h1 className="header"> {React.string("Together")} </h1>
+    {React.array(emojis)}
+  </div>;
 };
-
-include ReactRe.CreateComponent App;
-
-let createElement ::title => wrapProps {title: title};

@@ -1,19 +1,22 @@
-/* This is the BuckleScript configuration file. Note that this is a comment;
-  BuckleScript comes with a JSON parser that supports comments and trailing
-  comma. If this screws with your editor highlighting, please tell us by filing
-  an issue! */
 {
   "name": "create-reason-react-app",
   "reason": {
-    "react-jsx": true
+    "react-jsx": 3
   },
   "bs-dependencies": [
-    "reason-react",
-    "bs-director"
+    "reason-react"
   ],
   "sources": [
     {
       "dir": "src"
     }
-  ]
+  ],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "namespace": false,
+  "suffix": ".bs.js"
 }
